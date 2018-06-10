@@ -1,15 +1,20 @@
 package main
 
 import (
-	"com.buff/learngo/crawler/engine"
-	"com.buff/learngo/crawler/zhenai/parse"
+	"com.buff/Crawler/crawler/crawler/engine"
+	"com.buff/Crawler/crawler/crawler/zhenai/parse"
+	"com.buff/Crawler/crawler/crawler/scheduler"
 )
 
 /**
 程序入口
  */
 func main() {
-	engine.Run(engine.Request{
+	e := engine.ConcurrentEngine{
+		Scheduler: &scheduler.SimpleScheduler{},
+		WorkerCount: 10,
+	}
+	e.Run(engine.Request{
 		Url: "http://www.zhenai.com/zhenghun",
 		ParserFunc: parse.ParseCityList,
 	})

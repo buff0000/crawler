@@ -1,10 +1,10 @@
 package parse
 
 import (
-	"com.buff/learngo/crawler/engine"
 	"regexp"
-	"com.buff/learngo/crawler/model"
 	"strconv"
+	"com.buff/Crawler/crawler/crawler/model"
+	"com.buff/Crawler/crawler/crawler/engine"
 )
 
 

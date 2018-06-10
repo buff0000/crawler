@@ -1,8 +1,8 @@
 package parse
 
 import (
-	"com.buff/learngo/crawler/engine"
 	"regexp"
+	"com.buff/Crawler/crawler/crawler/engine"
 )
 
 const cityRe = `<th><a href="(http://album.zhenai.com/u/[0-9]+)"[^>]+">([^<]+)</a></th>`

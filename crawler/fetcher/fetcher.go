@@ -17,8 +17,9 @@ import (
 func httpclientDef(url string) (resp *http.Response, err error){
 	return http.Get(url)
 }
-
+var rateLimiter = time.Tick(10 * time.Millisecond)
 func httpclient(url string) (resp *http.Response, err error){
+	<- rateLimiter
 	client := &http.Client{}
 	req, err := http.NewRequest("GET",url, nil)
 	if err != nil{

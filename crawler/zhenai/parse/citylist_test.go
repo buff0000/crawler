@@ -2,7 +2,7 @@ package parse
 
 import (
 	"testing"
-	"com.buff/learngo/crawler/fetcher"
+	"com.buff/Crawler/crawler/crawler/fetcher"
 )
 
 func TestParseCityList(t *testing.T) {
